@@ -6,4 +6,7 @@ RUN apt-get update \
     && apt-get install -y telnet \
     ca-certificates \
     software-properties-common
-RUN apt-get install -y python-pip
+RUN apt-get install -y python-pip && pip install --upgrade pip \ 
+    && apt-get install -y python3-pip && pip3 install --upgrade pip
+
+RUN apt-get install -y tree
